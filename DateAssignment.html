@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script>
+
+        var name = prompt("Enter Your Name");
+        var date = prompt("Enter Your Date Of Birth");
+        var month = prompt("Enter Your Month Of Birth");
+        var year = prompt("Enter Your Year Of Birth");
+        var Months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        var dob = new Date(Months[month] + date + ", " + year);
+        
+        var currentDate = new Date();
+        var msDiff = currentDate.getTime() - dob.getTime();
+        var sec = msDiff / 1000;
+        var minutes = msDiff / (1000 * 60);
+        var hours = msDiff / (1000 * 60 * 60);
+        var days = msDiff / (1000 * 60 * 60 * 24);
+        var years = msDiff / (1000 * 60 * 60 * 24 * 365)
+        var months = (((msDiff / (1000 * 60 * 60 * 24) / 365) * 12) % 12);
+        alert("you are" + years + " " + months + " month ", days + " days " + hours + " hours " + minutes + " minutes " + sec + " seconds ")
+
+
+        var nextYear = currentDate.getFullYear() + 1;
+        alert(nextYear);
+        var NextDob = new Date(Months[month] + date + ", " + nextYear);
+        alert(NextDob)
+        var msDiffNext = NextDob.getTime() - currentDate.getTime();
+        var secNext = msDiffNext / 1000;
+        var minutesNext = msDiffNext / (1000 * 60);
+        var hoursNext = msDiffNext / (1000 * 60 * 60);
+        var daysNext = msDiffNext / (1000 * 60 * 60 * 24);
+        var yearsNext = msDiffNext / (1000 * 60 * 60 * 24 * 365)
+        var monthsNext = (((msDiffNext / (1000 * 60 * 60 * 24) / 365) * 12) % 12)
+        alert(monthsNext + " month ", daysNext + " days " + hoursNext + " hours " + minutesNext + " minutes " + secNext + " seconds ");
+ 
+
+
+
+
+
+
+        </script>
+    </head>
+</html>
